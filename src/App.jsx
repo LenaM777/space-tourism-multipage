@@ -1,5 +1,5 @@
-import "../styles/global.scss";
+import Layout from "./layout/Layout";
 
 export default function App() {
-  return <div className="app-wrapper">App</div>;
+  return <Layout />;
 }
