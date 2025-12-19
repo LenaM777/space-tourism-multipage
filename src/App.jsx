@@ -1,7 +1,5 @@
-import React from "react";
+import "../styles/global.scss";
 
-const App = () => {
-  return <div>App</div>;
-};
-
-export default App;
+export default function App() {
+  return <div className="app-wrapper">App</div>;
+}
