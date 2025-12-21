@@ -1,0 +1,92 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+@use "../../styles/typography" as typography;
+
+.header {
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 0 0 0;
+  position: relative;
+  @include flex-between;
+
+  @media (max-width: $bp-tablet) {
+    padding: 0;
+  }
+
+  @media (max-width: $bp-mobile) {
+    padding: 24px;
+  }
+
+  &__elems {
+    @include flex-center;
+    flex-basis: 50%;
+
+    @media (max-width: $bp-tablet) {
+      flex-basis: 0;
+    }
+  }
+
+  &__logo {
+    display: block;
+    width: 48px;
+    height: 48px;
+    margin-left: 64px;
+
+    @media (max-width: $bp-tablet) {
+      margin: 0 40px;
+    }
+
+    @media (max-width: $bp-mobile) {
+      margin: 0;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__line {
+    flex: 1;
+    height: 1px;
+    position: relative;
+    z-index: 4;
+    background: var(--color-white);
+    opacity: 0.25;
+    margin-left: 32px;
+    transform: translateX(32px);
+  
+    @media (max-width: $bp-tablet) {
+      display: none;
+    }
+  }
+
+  &__nav {
+    @include flex-end;
+    flex-basis: 50%;
+    gap: 48px;
+    backdrop-filter: blur(40px);
+    background: var(--color-glass-white);
+    padding: 0 48px;
+    height: 96px;
+
+    @media (max-width: $bp-tablet) {
+      padding: 0 40px;
+      flex: 1;
+    }
+    @media (max-width: $bp-mobile) {
+      display: none;
+    }
+
+    
+  }
+  &__burger {
+    display: none;
+    width: 24px;
+    height: 21px;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    @media (max-width: $bp-mobile) {
+      display: flex;
+    }
+  }
+}

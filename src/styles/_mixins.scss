@@ -13,6 +13,18 @@
   justify-content: center;
 }
 
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-end {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
 @mixin flex-row {
   display: flex;
   flex-direction: row;
